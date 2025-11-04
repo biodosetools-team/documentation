@@ -45,7 +45,8 @@ fit_results <- fit(
 ```{r dic-fit-dose-curve-bad, echo=FALSE, out.width="100%", fig.dpi=300, fig.align="center", fig.height=3, fig.width=6, fig.cap="Plot of dose-effect curve constructed from the dicentric distribution in Table \\@ref(tab:dic-count-data-bad)."}
 plot_fit_dose_curve(
   fit_results,
-  aberr_name = "Dicentrics"
+  aberr_name = "Dicentrics",
+  place = "UI"
 )
 ```
 
