@@ -226,7 +226,7 @@ Next we can choose to either load the case data from a file or to input the data
 
 ```{r trans-case-data}
 case_data <- data.frame(
-  C0 = 288, C1 = 52, C2 = 9, C3 = 1
+  ID = 'Case1', C0 = 288, C1 = 52, C2 = 9, C3 = 1
 ) |>
   calculate_aberr_table(
     type = "case",
