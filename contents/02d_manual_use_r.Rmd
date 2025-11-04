@@ -122,7 +122,8 @@ plot_estimated_dose_curve(
   fit_var_cov_mat,
   protracted_g_value = 1,
   conf_int_curve = 0.95,
-  aberr_name = "Dicentrics"
+  aberr_name = "Dicentrics",
+  place = "UI"
 )
 ```
 
@@ -293,6 +294,7 @@ plot_estimated_dose_curve(
   fit_var_cov_mat,
   protracted_g_value,
   conf_int_curve = 0.95,
-  aberr_name = "Translocations"
+  aberr_name = "Translocations",
+  place = "UI"
 )
 ```
