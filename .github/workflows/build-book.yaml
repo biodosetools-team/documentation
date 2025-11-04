@@ -64,7 +64,7 @@ jobs:
         shell: Rscript {0}
 
       - name: Cache bookdown results
-        uses: actions/cache@v2
+        uses: actions/cache@v4
         with:
           path: _bookdown_files
           key: bookdown-2-${{ hashFiles('**/*Rmd') }}
