@@ -30,7 +30,7 @@ jobs:
       - name: Install macOS system dependencies
         if: runner.os == 'macOS'
         run: |
-          brew install libgit2 xml2
+          brew install libgit2 libxml2
 
       - name: Install dependencies
         run: |
