@@ -62,6 +62,7 @@ case_data <- system.file("extdata", "cases-data-partial.csv", package = "biodose
 
 ```{r th-dose-merkle-results, include=FALSE}
 results_whole_merkle <- estimate_whole_body_merkle(
+  num_cases = 1,
   case_data,
   fit_coeffs,
   fit_var_cov_mat,
@@ -127,6 +128,7 @@ Note that this derivation assumes that the covariances $\sigma_{\lambda, C}$, $\
 
 ```{r th-dose-delta-results, include=FALSE}
 results_whole_delta <- estimate_whole_body_delta(
+  num_cases = 1,
   case_data,
   fit_coeffs,
   fit_var_cov_mat,
@@ -236,6 +238,7 @@ Note that this derivation assumes that the covariances $\sigma_{\lambda, C}$, $\
 
 ```{r th-dose-partial-results, include=FALSE}
 results_partial_dolphin <- estimate_partial_body_dolphin(
+  num_cases = 1,
   case_data,
   fit_coeffs,
   fit_var_cov_mat,
