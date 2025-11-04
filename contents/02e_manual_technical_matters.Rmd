@@ -53,7 +53,7 @@ plot_fit_dose_curve(
 In Table \@ref(tab:dic-case-data-bad) below we can see an example of a case we may want to estimate the dose for. If we try to estimate the dose using Merkle's method, we encounter an error involving the `uniroot()` function. The function `uniroot()` searches for a root (i.e., zero) of the function $f(x_{1}, \dots, x_{n})$ with respect to its first argument $x_{1}$ within a specified interval. In our example, this error occurs when projecting the upper 95% confidence limit of the yield $\lambda_{U}$ into the lower curve \@ref(eq:merkle-dose-estimation-error). The reason for this is that the lower 95% confidence band of the dose-effect curve is not a monotonically increasing function, meaning that $D_{L}$ has multiple possible numerical solutions, as shown in Figure \@ref(fig:dic-fit-dose-curve-bad-extended).
 ```{r dic-case-data-bad, warning=FALSE, message=FALSE, echo=FALSE}
 case_data <- calculate_aberr_table(
-  data.frame(C0 = 136L, C1 = 11L, C2 = 1L),
+  data.frame(ID = "Case1", C0 = 136L, C1 = 11L, C2 = 1L),
   type = "case",
   aberr_module = "dicentrics"
 )
