@@ -8,14 +8,14 @@ theory_plot_estimated_dose_curve <- function(est_doses, fit_coeffs, fit_var_cov_
   # Parse dose estimation list
   est_full_doses <- data.frame(
     dose = c(
-      if ("whole" %in% assessments) est_doses$whole$est_doses[["dose"]],
-      if ("partial" %in% assessments) est_doses$partial$est_doses[["dose"]],
+      if ("whole" %in% assessments) as.numeric(est_doses$whole[[1]]$est_doses),
+      if ("partial" %in% assessments) as.numeric(est_doses$partial[[1]]$est_doses),
       if ("hetero" %in% assessments) est_doses$hetero$est_doses[["dose1"]],
       if ("hetero" %in% assessments) est_doses$hetero$est_doses[["dose2"]]
     ),
     yield = c(
-      if ("whole" %in% assessments) est_doses$whole$est_doses[["yield"]],
-      if ("partial" %in% assessments) est_doses$partial$est_doses[["yield"]],
+      if ("whole" %in% assessments) as.numeric(est_doses$whole[[1]]$est_yield),
+      if ("partial" %in% assessments) as.numeric(est_doses$partial[[1]]$est_yield),
       if ("hetero" %in% assessments) est_doses$hetero$est_yields[["yield1"]],
       if ("hetero" %in% assessments) est_doses$hetero$est_yields[["yield2"]]
     ),
