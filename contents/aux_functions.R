@@ -99,7 +99,7 @@ theory_plot_estimated_dose_curve <- function(est_doses, fit_coeffs, fit_var_cov_
     # Estimated whole-body doses
     ggplot2::geom_point(
       data = est_full_doses,
-      mapping = ggplot2::aes(x = .data$dose, y = .data$yield, shape = .data$level),
+      mapping = ggplot2::aes(x = .data$dose, y = .data$yield, shape = .data$level, color = .data$type),
       size = 2, na.rm = TRUE
     ) +
     # Assessment
