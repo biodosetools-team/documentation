@@ -126,6 +126,24 @@ Note that this derivation assumes that the covariances $\sigma_{\lambda, C}$, $\
   (\#eq:conf-int-yield)
 \end{align}
 
+```{r th-dose-delta-case, include=FALSE}
+case_data <- data.frame(
+  ID= "example1",
+  N = 361,
+  X = 100,
+  C0 = 302,
+  C1 = 28,
+  C2 = 22,
+  C3 = 8,
+  C4 = 1,
+  C5 = 0,
+  y = 0.277,
+  y_err = 0.0368,
+  DI = 1.77,
+  u = 10.4
+)
+```
+
 ```{r th-dose-delta-results, include=FALSE}
 results_whole_delta <- estimate_whole_body_delta(
   num_cases = 1,
